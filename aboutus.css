@@ -1,0 +1,371 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    letter-spacing: 3px;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.band-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;  /* Space between the logo and the text */
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+/* Top Navigation (Desktop View) */
+.top-nav {
+    display: flex;
+    justify-content: center;  /* Centering the navigation links horizontally */
+    align-items: center;  /* Centering the navigation links vertically */
+    width: 100%;  /* Ensure nav spans the full width */
+}
+
+.top-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav ul li {
+    margin: 0 20px;  /* Space between the nav items */
+    text-align: center;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 21px;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.top-nav ul li a:hover {
+    background: #f0f0f0;
+    color: #ff6600;
+}
+
+/* Hamburger Button (Mobile View) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Overlay Navigation (Mobile View) */
+.overlay {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: -250px;  /* Start hidden off the right side */
+    width: 250px;
+    height: 100%;
+    background: #808080;  /* Solid grey */
+    z-index: 1001;
+    transition: right 0.5s ease-in-out;  /* Smooth slide-in/out animation */
+}
+
+.overlay-nav {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 50px;  /* Optional: adds space from the top */
+}
+
+.overlay-nav li {
+    margin: 20px 0;
+}
+
+.overlay-nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.overlay-nav li a:hover {
+    background: #ff6600;
+}
+
+/* Close Button (X) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1002;  /* Ensure it's above the overlay */
+    transition: color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+/* Hover effect for close button */
+.close-btn:hover {
+    color: #ff6600;  /* Change color on hover */
+    transform: scale(1.1);  /* Slight scale effect on hover */
+}
+
+.text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.text::before, .text::after {
+    content: "";
+    height: 1.5px;
+    background: #818181;
+    display: block;
+    margin: 0 0; /* Controls the gap between the text and the lines */
+}
+
+
+/* Hero Section */
+.hero {
+    background: url('pic1.jpg') no-repeat center center/cover;
+    height: 60vh; /* Consistent height across devices */
+    display: flex;
+    background-size: cover;
+    text-indent: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: #555;
+    align-items: left;
+    color: #fff;
+    margin-left: 90px;
+    margin-right: 100px;
+    margin-top: 50px;
+    border-radius: 10px 10px 0 0;
+    opacity: 0; /* Start with the image hidden */
+    animation: fadeIn 2s forwards; /* Apply fade-in animation */
+}
+h1 {
+    margin: 20px 0;
+    color: #333;
+  }
+  
+  .programs {
+    padding: 20px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .box img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .box h2 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .box p {
+    color: #777;
+    font-size: 14px;
+  }
+
+.hero-content h2 {
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.hero-content p {
+    color: #777;
+    text-align: justify;
+    background-position: left;
+    margin-left:100px;
+    margin-right: 100px;
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in animation to each image */
+.box img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+    opacity: 0; /* Start with the image hidden */
+    animation: fadeIn 2s forwards; /* Apply fade-in animation */
+}
+
+/* Add a delay for each image to fade in sequentially */
+.box:nth-child(1) img {
+    animation-delay: 0s; /* First image fades in immediately */
+}
+
+.box:nth-child(2) img {
+    animation-delay: 0.1s; /* Second image fades in after 0.5 seconds */
+}
+
+.box:nth-child(3) img {
+    animation-delay: 0.5s; /* Third image fades in after 1 second */
+}
+
+.box:nth-child(4) img {
+    animation-delay: 1.1s; /* Fourth image fades in after 1.5 seconds */
+}
+
+.box:nth-child(5) img {
+    animation-delay: 1.5s; /* Fifth image fades in after 2 seconds */
+}
+
+.box:nth-child(6) img {
+    animation-delay: 1s; /* Sixth image fades in after 2.5 seconds */
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    
+
+    .hero {
+        margin: 0; /* Remove large margins to fit mobile view */
+        height: 60vh; /* Keep the same height as desktop */
+        background-size: contain; /* Ensure consistent image scaling */
+        background-position: center; /* Center the image */
+        margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    }
+    
+    /* Display the hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide the top navigation on mobile */
+    .top-nav {
+        display: none;
+    }
+
+    /* Overlay adjustments */
+    .overlay {
+        display: block;
+    }
+
+    .overlay-nav {
+        margin-top: 100px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop view (Show the top navigation) */
+@media (min-width: 769px) {
+
+    
+    /* Show the top navigation on desktop */
+    .top-nav {
+        display: flex;
+    }
+
+    /* Hide the hamburger menu on desktop */
+    .hamburger {
+        display: none;
+    }
+
+    /* Overlay should be hidden on desktop */
+    .overlay {
+        display: none;
+    }
+}
