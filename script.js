@@ -52,13 +52,13 @@ new Swiper('.card-wrapper', {
 
     breakpoints: {
       0: {
-        slidesPerView: 2.3
+        slidesPerView: 2.20
       },
       768: {
         slidesPerView: 2.3
       },
       1024: {
-        slidesPerView: 3.1
+        slidesPerView: 3.08
       },
     }
   });

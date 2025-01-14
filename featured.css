@@ -158,6 +158,11 @@ header {
     margin: 0 0; /* Controls the gap between the text and the lines */
 }
 
+.card-wrapper{
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
 .card-list .card-item .card-link{
     user-select: none;
     display: block;

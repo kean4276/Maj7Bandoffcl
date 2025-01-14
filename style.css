@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100..900&display=swap');
+
 /* General Styles */
 body {
     margin: 0;
@@ -5,6 +7,7 @@ body {
     line-height: 1.6;
     color: #333;
     letter-spacing: 3px;
+    background: linear-gradient(#ECEFFE, #CED6FB);
 }
 
 /* Header */
@@ -162,7 +165,7 @@ header {
     height: 60vh; /* Consistent height across devices */
     display: flex;
     justify-content: left;
-    background-size: auto;
+    background-size: cover;
     text-indent: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-shadow: #555;
@@ -215,6 +218,84 @@ h1 {
     }
 }
 
+.card-wrapper{
+    margin-top: 20px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.card-item{
+    margin-top: 20px;
+}
+
+.card-list .card-item .card-link{
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;  
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+
+}
+
+.card-list .card-item .card-link:hover {
+    border-color: #5372f0;
+}
+
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10PX;
+}
+
+.card-list .card-link .badge{
+    color: #0f0f0f;
+    padding: 8px 16PX;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #c4c4c4;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-item .cardt-title{
+    font-size: 1.19rem;
+    color: #464646;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #5372f0;
+    transform: rotate(-45deg);
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #5372f0;
+}
+
+.card-wrapper .swiper-pagination-bullet{
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}   
 
 /* Footer */
 footer {
@@ -232,9 +313,8 @@ footer {
         margin: 0; /* Remove large margins to fit mobile view */
         height: 60vh; /* Keep the same height as desktop */
         background-size: contain; /* Ensure consistent image scaling */
-        background-position: center; /* Center the image */
-        margin-left: 100px;
-    margin-right: 100px;
+        margin-left: 20px;
+    margin-right: 20px;
     margin-top: 50px;
     }
     
